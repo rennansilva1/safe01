@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Reembolso - Viva Levemente</title>
+    <style>
+      :root {
+        --primary: #4a7c59;
+        --secondary: #89b399;
+        --accent: #f4b942;
+        --text: #333;
+        --light: #f5f5f5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: var(--primary);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h2 a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 64px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .policy-section {
+        background: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .policy-section:hover {
+        transform: translateY(-5px);
+      }
+
+      .policy-section h2 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .policy-section ul {
+        list-style: none;
+        margin: 1rem 0;
+      }
+
+      .policy-section ul li {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .policy-section ul li::before {
+        content: "•";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
+
+      .refund-steps {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem 0;
+      }
+
+      .step-card {
+        flex: 1;
+        min-width: 250px;
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .step-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-weight: bold;
+      }
+
+      .testimonials {
+        background: white;
+        padding: 4rem 0;
+      }
+
+      .testimonials h2 {
+        text-align: center;
+        color: var(--primary);
+        margin-bottom: 3rem;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .testimonial-card {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        overflow: hidden;
+      }
+
+      .testimonial-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .testimonial-card p {
+        font-style: italic;
+        margin: 1rem 0;
+      }
+
+      .testimonial-card h4 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .rating {
+        color: var(--accent);
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          height: 40vh;
+        }
+
+        nav ul {
+          display: none;
+        }
+
+        .refund-steps {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2><a href="/">Viva Levemente</a></h2>
+        <ul>
+          <li><a href="/">Voltar ao Início</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Política de Reembolso</h1>
+          <p>Garantimos sua satisfação com nossa política de devolução</p>
+        </div>
+      </section>
+
+      <section class="policy-content">
+        <div class="container">
+          <div class="policy-section">
+            <h2>1. Prazo de Reembolso</h2>
+            <p>Oferecemos reembolso total em até:</p>
+            <ul>
+              <li>7 dias após a compra para planos digitais</li>
+              <li>30 dias para produtos físicos</li>
+              <li>Garantia de satisfação em todos os serviços</li>
+            </ul>
+          </div>
+
+          <div class="policy-section">
+            <h2>2. Como Solicitar</h2>
+            <div class="refund-steps">
+              <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Acesse sua conta</h3>
+                <p>Entre no seu perfil no site</p>
+              </div>
+              <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Selecione o pedido</h3>
+                <p>Encontre o item que deseja devolver</p>
+              </div>
+              <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Solicite o reembolso</h3>
+                <p>Clique em "Solicitar Reembolso"</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="policy-section">
+            <h2>3. Prazos de Processamento</h2>
+            <p>Após aprovação, o reembolso é processado em:</p>
+            <ul>
+              <li>Até 3 dias úteis para cartão de crédito</li>
+              <li>Até 5 dias úteis para transferência bancária</li>
+              <li>Imediato para créditos na plataforma</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Feedback dos Clientes</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                alt="Cliente"
+              />
+            </div>
+            <p>
+              "Precisei solicitar reembolso uma vez e o processo foi super
+              tranquilo. Em 2 dias o valor já estava na minha conta!"
+            </p>
+            <h4>Fernanda Santos</h4>
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                alt="Cliente"
+              />
+            </div>
+            <p>
+              "A política de reembolso clara e justa me deu confiança para
+              experimentar os produtos. Acabei adorando tudo!"
+            </p>
+            <h4>Carlos Eduardo</h4>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Viva Levemente. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add animation to step cards
+      const stepCards = document.querySelectorAll(".step-card");
+      stepCards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          card.style.transform = "scale(1.05)";
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "translateY(-5px)";
+        });
+      });
+
+      // Add animation to testimonial cards
+      const testimonialCards = document.querySelectorAll(".testimonial-card");
+      testimonialCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.style.transform = "scale(1.05)";
+          setTimeout(() => {
+            card.style.transform = "translateY(-5px)";
+          }, 200);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de Privacidade - Viva Levemente</title>
+    <style>
+      :root {
+        --primary: #4a7c59;
+        --secondary: #89b399;
+        --accent: #f4b942;
+        --text: #333;
+        --light: #f5f5f5;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: var(--primary);
+        padding: 1rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav h2 a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        height: 50vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://images.unsplash.com/photo-1582138302851-417726968d0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 64px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .policy-section {
+        background: white;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .policy-section:hover {
+        transform: translateY(-5px);
+      }
+
+      .policy-section h2 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      .policy-section ul {
+        list-style: none;
+        margin: 1rem 0;
+      }
+
+      .policy-section ul li {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .policy-section ul li::before {
+        content: "•";
+        color: var(--accent);
+        position: absolute;
+        left: 0;
+      }
+
+      .testimonials {
+        background: white;
+        padding: 4rem 0;
+      }
+
+      .testimonials h2 {
+        text-align: center;
+        color: var(--primary);
+        margin-bottom: 3rem;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .testimonial-card {
+        background: var(--light);
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+        cursor: pointer;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .testimonial-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto 1rem;
+        overflow: hidden;
+      }
+
+      .testimonial-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .testimonial-card p {
+        font-style: italic;
+        margin: 1rem 0;
+      }
+
+      .testimonial-card h4 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .rating {
+        color: var(--accent);
+      }
+
+      footer {
+        background: var(--primary);
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 4rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          height: 40vh;
+        }
+
+        nav ul {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2><a href="/">Viva Levemente</a></h2>
+        <ul>
+          <li><a href="/">Voltar ao Início</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Política de Privacidade</h1>
+          <p>Entenda como protegemos seus dados e garantimos sua privacidade</p>
+        </div>
+      </section>
+
+      <section class="policy-content">
+        <div class="container">
+          <div class="policy-section">
+            <h2>1. Coleta de Dados</h2>
+            <p>
+              Coletamos apenas as informações necessárias para melhorar sua
+              experiência:
+            </p>
+            <ul>
+              <li>Nome e email para cadastro</li>
+              <li>Preferências de chás para recomendações personalizadas</li>
+              <li>Histórico de compras para melhor atendimento</li>
+            </ul>
+          </div>
+
+          <div class="policy-section">
+            <h2>2. Uso das Informações</h2>
+            <p>Suas informações são utilizadas para:</p>
+            <ul>
+              <li>Personalizar sua experiência</li>
+              <li>Enviar newsletters e promoções</li>
+              <li>Melhorar nossos produtos e serviços</li>
+            </ul>
+          </div>
+
+          <div class="policy-section">
+            <h2>3. Proteção de Dados</h2>
+            <p>Implementamos medidas rigorosas de segurança:</p>
+            <ul>
+              <li>Criptografia de ponta a ponta</li>
+              <li>Servidores seguros</li>
+              <li>Acesso restrito a dados sensíveis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials">
+        <h2>Experiências dos Nossos Clientes</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                alt="Cliente"
+              />
+            </div>
+            <p>
+              "A transparência da Viva Levemente com os dados dos clientes é
+              admirável. Me sinto segura compartilhando minhas informações."
+            </p>
+            <h4>Marina Silva</h4>
+            <div class="rating">★★★★★</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-image">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                alt="Cliente"
+              />
+            </div>
+            <p>
+              "Excelente como a empresa lida com a privacidade dos usuários. As
+              recomendações personalizadas são sempre pertinentes."
+            </p>
+            <h4>Ricardo Oliveira</h4>
+            <div class="rating">★★★★★</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2025 Viva Levemente. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add animation to testimonial cards
+      const testimonialCards = document.querySelectorAll(".testimonial-card");
+      testimonialCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          card.style.transform = "scale(1.05)";
+          setTimeout(() => {
+            card.style.transform = "translateY(-5px)";
+          }, 200);
+        });
+      });
+    </script>
+  </body>
+</html>
